@@ -1,0 +1,57 @@
+{% extends "index.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block title %} decline {% endblock %}
+
+{% block content %}
+    <h1>Summary</h1><br>
+
+    <h2>Names</h2>
+    <ul>
+        {% for record in data %}
+            <li>{{ record['usr_name']}}</li>
+        {% endfor %}
+    </ul>
+    <br><br><br>
+
+    <!-- <h2>Pet</h2>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <br><br><br> -->
+
+    <h2>Year</h2>
+    <div>
+        <canvas id="myChart"></canvas>
+        <!-- <ul>
+            {% for record in data %}
+                <li>{{ record['usr_year'] }}</li>
+            {% endfor %}
+        </ul> -->
+    </div>
+    <br><br><br>
+
+    <h2>Suggestions</h2>
+    <ul>
+        {% for record in data %}
+            {% if record['usr_suggestions'] is not none %}
+                <li>{{ record['usr_suggestions'] }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <br><br><br><br>
+      
+
+{% endblock %}
+
+{% block js %}    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+    integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw=="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"
+    integrity="sha512-zO8oeHCxetPn1Hd9PdDleg5Tw1bAaP0YmNvPY8CwcRyUk7d7/+nyElmFrB6f7vg4f7Fv4sui1mcep8RIEShczg=="
+    crossorigin="anonymous"></script>
+    <script src="/static/summary.js"></script>
+{% endblock %} 
