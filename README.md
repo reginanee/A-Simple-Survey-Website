@@ -7,7 +7,7 @@
 
 
 ## About
-
+This is a small flask app for collecting survey responses, hosted on Heroku. The server is written in flask, using jinja for templating and postgreSQL for data storage. The client side uses Pure.css and Chart.js for styling. The administrator can look at the survey result summary by going to a summary page.
 
 ## Link to Site
 
